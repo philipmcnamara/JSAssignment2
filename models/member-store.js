@@ -9,18 +9,13 @@ const memberStore = {
     return this.memberCollection;
   },
 
-  getMember(id) {
-    let foundMember = null;
-    for (let member of this.memberCollection) {
-      if (id == member.id) {
-        foundMember = member;
-      }
-    }
-
-    return foundMember;
+    getMember(id) {
+    return _.find(this.memberCollection, { id: id });
   },
+  
     removeStat(id, statId) {
     const member = this.getMember(id);
+    _.remove(member.stats, { id: statId });
 
     // TODO : remove the song with id songId from the playlist
   },
