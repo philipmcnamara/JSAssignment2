@@ -11,6 +11,6 @@ const member = require('./controllers/member.js');
 router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
-router.get('/member', member.index);
+router.get('/member/id', member.index);
 
 module.exports = router;
