@@ -1,9 +1,11 @@
 {
   "memberCollection": [
     {
+      "id" : "01",
       "name": "Homer Simpson",
       "stats": [
         {
+          "id" : "03",
           "weight": "200",
           "chest": "50",
           "thigh": "40",
@@ -12,6 +14,7 @@
           "hips": "10"
         },
         {
+          "id" : "04",
           "weight": "190",
           "chest": "50",
           "thigh": "40",
@@ -20,6 +23,7 @@
           "hips": "10"
         },
         {
+          "id" : "05",
           "weight": "180",
           "chest": "50",
           "thigh": "40",
@@ -30,9 +34,11 @@
       ]
     },
     {
+      "id" : "02",
       "name": "Marge Simpson",
       "stats": [
         {
+          "id" : "06",
           "weight": "100",
           "chest": "50",
           "thigh": "40",
@@ -41,6 +47,7 @@
           "hips": "10"
         },
         {
+          "id" : "07",
           "weight": "90",
           "chest": "50",
           "thigh": "40",
@@ -49,6 +56,7 @@
           "hips": "10"
         },
         {
+          "id" : "08",
           "weight": "80",
           "chest": "50",
           "thigh": "40",
