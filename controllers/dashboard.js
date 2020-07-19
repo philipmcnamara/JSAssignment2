@@ -1,46 +1,18 @@
-"use strict";
+'use strict';
 
-const logger = require("../utils/logger");
-
-const homers = {
-  name: 'Homer Simpson',
-  stats: [
-    {
-      weight: '200',
-      chest: '50',
-      thigh: '40',
-      upperArm: '30',
-      waist: '20',
-      hips: '10',
-    },
-    {
-      weight: '190',
-      chest: '50',
-      thigh: '40',
-      upperArm: '30',
-      waist: '20',
-      hips: '10',
-    },
-    {
-      weight: '180',
-      chest: '50',
-      thigh: '40',
-      upperArm: '30',
-      waist: '20',
-      hips: '10',
-    },
-  ],
-};
+const logger = require('../utils/logger');
+const memberCollection = require('../models/playlist-store.js');
 
 const dashboard = {
   index(request, response) {
-    logger.info("dashboard rendering");
+    logger.info('dashboard rendering');
     const viewData = {
-      title: 'Member 1 Dashboard',
-      member: homers
+      name: 'Playlist Dashboard',
+      member: memberCollection,
     };
-    response.render("dashboard", viewData);
-  }
+    logger.info('about to render', memberCollection);
+    response.render('dashboard', viewData);
+  },
 };
 
 module.exports = dashboard;

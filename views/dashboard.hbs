@@ -1,8 +1,46 @@
+    
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
-  <h2 class="ui header">
-    Member Name
-  </h2>
-  {{> liststats}}
-</section>
+{{#each member}}
+  <section class="ui segment">
+    <h2 class="ui header">
+      {{title}}
+    </h2>
+    <table class="ui table">
+      <thead>
+        <tr>
+        <th> Weight </th>
+        <th> Chest </th>
+        <th> Thigh </th>
+        <th> UpperArm </th>
+        <th> Waist </th>
+        <th> Hips </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each songs}}
+          <tr>
+            <td>
+                {{weight}}
+            </td>
+            <td>
+                {{chest}}
+            </td>
+            <td>
+                {{thigh}}
+            </td>
+            <td>
+                {{upperArm}}
+            </td>
+            <td>
+                {{waist}}
+            </td>
+            <td>
+                {{hips}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+{{/each}}
