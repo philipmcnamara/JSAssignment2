@@ -19,6 +19,9 @@ const memberStore = {
 
     // TODO : remove the song with id songId from the playlist
   },
+    removeMember(id) {
+    _.remove(this.memberCollection, { id: id });
+  },
 };
 
 module.exports = memberStore;

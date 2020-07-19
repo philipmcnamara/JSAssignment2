@@ -14,6 +14,12 @@ const dashboard = {
     logger.info('about to render', memberStore.getAllMembers());
     response.render('dashboard', viewData);
   },
+    deleteMember(request, response) {
+    const memberId = request.params.id;
+    logger.debug(`Deleting Member( ${memberId}`);
+    memberStore.removeMember(memberId);
+    response.redirect('/dashboard');
+  },
 };
 
 module.exports = dashboard;

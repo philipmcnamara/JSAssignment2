@@ -12,5 +12,6 @@ router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
 router.get("/member/:id", member.index);
 router.get("/member/:id/deletestat/:statid", member.deleteStat);
+router.get('/dashboard/deletemember/:id', dashboard.deleteMember);
 
 module.exports = router;
