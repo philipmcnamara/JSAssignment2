@@ -13,6 +13,13 @@ const member = {
     };
     response.render('member', viewData);
   },
+    deleteStat(request, response) {
+    const memberId = request.params.id;
+    const statId = request.params.statId;
+    logger.debug(`Deleting Stat ${statId} from Member ${memberId}`);
+    memberStore.removeStat(memberId, statId);
+    response.redirect('/member/' + memberId);
+  },
 };
 
 module.exports = member;
