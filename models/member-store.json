@@ -1,0 +1,62 @@
+{
+  "memberCollection": [
+    {
+      "name": "Homer Simpson",
+      "stats": [
+        {
+          "weight": "200",
+          "chest": "50",
+          "thigh": "40",
+          "upperArm": "30",
+          "waist": "20",
+          "hips": "10"
+        },
+        {
+          "weight": "190",
+          "chest": "50",
+          "thigh": "40",
+          "upperArm": "30",
+          "waist": "20",
+          "hips": "10"
+        },
+        {
+          "weight": "180",
+          "chest": "50",
+          "thigh": "40",
+          "upperArm": "30",
+          "waist": "20",
+          "hips": "10"
+        }
+      ]
+    },
+    {
+      "name": "Marge Simpson",
+      "stats": [
+        {
+          "weight": "100",
+          "chest": "50",
+          "thigh": "40",
+          "upperArm": "30",
+          "waist": "20",
+          "hips": "10"
+        },
+        {
+          "weight": "90",
+          "chest": "50",
+          "thigh": "40",
+          "upperArm": "30",
+          "waist": "20",
+          "hips": "10"
+        },
+        {
+          "weight": "80",
+          "chest": "50",
+          "thigh": "40",
+          "upperArm": "30",
+          "waist": "20",
+          "hips": "10"
+        }
+      ]
+    }
+  ]
+}
