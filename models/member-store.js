@@ -16,11 +16,15 @@ const memberStore = {
     removeStat(id, statId) {
     const member = this.getMember(id);
     _.remove(member.stats, { id: statId });
-
-    // TODO : remove the song with id songId from the playlist
   },
+  
     removeMember(id) {
     _.remove(this.memberCollection, { id: id });
+  },
+  
+    addStat(id, stat) {
+    const member = this.getMember(id);
+    member.stats.push(stat);
   },
 };
 
