@@ -1,42 +1,6 @@
 'use strict';
 
 const _ = require('lodash');
-const memberStore = {
-
-  memberCollection: require('./member-store.json').memberCollection,
-
-  getAllMembers() {
-    return this.memberCollection;
-  },
-
-    getMember(id) {
-    return _.find(this.memberCollection, { id: id });
-  },
-  
-    removeStat(id, statId) {
-    const member = this.getMember(id);
-    _.remove(member.stat, { id: statId });
-  },
-  
-    removeMember(id) {
-    _.remove(this.memberCollection, { id: id });
-  },
-  
-  addStat(id, stat) {
-    const member = this.getMember(id);
-    member.stats.push(stat);
-  },
-  
-  addMember(member) {
-  this.memberCollection.push(member);
-},
-};
-
-module.exports = memberStore;
-
-'use strict';
-
-const _ = require('lodash');
 const JsonStore = require('./json-store');
 
 const memberStore = {
@@ -48,7 +12,7 @@ const memberStore = {
     return this.store.findAll(this.collection);
   },
 
-  getPlaylist(id) {
+  getMember(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
@@ -57,27 +21,27 @@ const memberStore = {
     this.store.save();
   },
 
-  removePlaylist(id) {
-    const member = this.getPlaylist(id);
+  removeMember(id) {
+    const member = this.getMember(id);
     this.store.remove(this.collection, member);
     this.store.save();
   },
 
-  removeAllPlaylists() {
+  removeAllMembers() {
     this.store.removeAll(this.collection);
     this.store.save();
   },
 
-  addSong(id, song) {
-    const member = this.getPlaylist(id);
-    member.songs.push(song);
+  addStat(id, stat) {
+    const member = this.getMember(id);
+    member.stats.push(stat);
     this.store.save();
   },
 
-  removeSong(id, songId) {
-    const member = this.getPlaylist(id);
-    const songs = member.songs;
-    _.remove(songs, { id: songId});
+  removeStat(id, statId) {
+    const member = this.getMember(id);
+    const stats = member.stats;
+    _.remove(stats, { id: statId});
     this.store.save();
   },
 };
