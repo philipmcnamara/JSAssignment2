@@ -15,7 +15,7 @@ const memberStore = {
   
     removeStat(id, statId) {
     const member = this.getMember(id);
-    _.remove(member.stats, { id: statId });
+    _.remove(member.stat, { id: statId });
   },
   
     removeMember(id) {
@@ -24,7 +24,7 @@ const memberStore = {
   
     addStat(id, stat) {
     const member = this.getMember(id);
-    member.stats.push(stat);
+    member.stat.push(stat);
   },
 };
 

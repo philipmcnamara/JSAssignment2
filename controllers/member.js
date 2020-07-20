@@ -15,7 +15,7 @@ const member = {
   },
     deleteStat(request, response) {
     const memberId = request.params.id;
-    const statId = request.params.statId;
+    const statId = request.params.statsId;
     logger.debug(`Deleting Stat ${statId} from Member ${memberId}`);
     memberStore.removeStat(memberId, statId);
     response.redirect('/member/' + memberId);
