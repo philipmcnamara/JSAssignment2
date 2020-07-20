@@ -22,9 +22,9 @@ const memberStore = {
     _.remove(this.memberCollection, { id: id });
   },
   
-    addStat(id, stat) {
+  addStat(id, stat) {
     const member = this.getMember(id);
-    member.stat.push(stat);
+    member.stats.push(stat);
   },
 };
 

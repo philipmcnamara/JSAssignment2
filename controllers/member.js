@@ -1,4 +1,5 @@
 'use strict';
+const uuid = require('uuid');
 
 const logger = require('../utils/logger');
 const memberStore = require('../models/member-store');
@@ -24,6 +25,7 @@ const member = {
     const memberId = request.params.id;
     const member = memberStore.getMember(memberId);
     const newStat = {
+      id: uuid.v1(),
       weight: request.body.weight,
       chest: request.body.chest,
       thigh: request.body.thigh,
