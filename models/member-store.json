@@ -14,6 +14,18 @@
           "hips": "6"
         }
       ]
+    },
+    {
+      "id": "3e65d7c0-cb52-11ea-b1dc-0bbbe8c890ec",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Homer Simpson",
+      "stats": []
+    },
+    {
+      "id": "4bc9bad0-cb52-11ea-b1dc-0bbbe8c890ec",
+      "userid": "2b6f0989-7b7f-4a38-ad26-aa06b922d751",
+      "name": "Marge Simpson",
+      "stats": []
     }
   ]
 }
