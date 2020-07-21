@@ -44,6 +44,10 @@ const memberStore = {
     _.remove(stats, { id: statId});
     this.store.save();
   },
+  
+    getUserMembers(userid) {
+    return this.store.findBy(this.collection, { userid: userid });
+  },
 };
 
 module.exports = memberStore;
